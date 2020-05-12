@@ -1,3 +1,7 @@
+
+<?php
+include"koneksi.php";
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -8,10 +12,43 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <title>CRUD doni wirawan</title>
+    <title>tampil data</title>
   </head>
   <body>
-    <h1></h1>
+    <div class="container mt-4">
+        <h1 class="text-center text-capitalize">tampil data siswa disini</h1>
+        <a href="text-left">Tambah data</a>
+        <table class="table">
+        <thead>
+            <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nama</th>
+            <th scope="col">NIM</th>
+            <th scope="col">ALAMAT</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <?php
+                $sql= "SELECT FROM mahasiswa";
+                $query = mysqli_query($koneksi,$sql);
+
+                while($mahasiswa = mysqli_fetch_array($query)){
+                echo "<tr>";
+                echo "<th>".$mahasiswa['id']."</th>";
+                echo "<td>".$mahasiswa['nama']."</td>";
+                echo "<td>".$mahasiswa['nim']."</td>";
+                echo "<td>".$mahasiswa['alamat']."</td>";
+                echo "</tr>";
+
+            }
+            ?>
+        </tbody>
+        </table>
+    </div>
+
+    <p>Total: <?php echo mysqli_num_rows($query) ?></p>
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
