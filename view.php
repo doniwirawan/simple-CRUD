@@ -1,7 +1,5 @@
 
-<?php
-include"koneksi.php";
-?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -18,36 +16,46 @@ include"koneksi.php";
     <div class="container mt-4">
         <h1 class="text-center text-capitalize">tampil data siswa disini</h1>
         <a href="text-left">Tambah data</a>
-        <table class="table">
+        <table class="table ">
         <thead>
-            <tr>
+            <tr class="bg-primary">
             <th scope="col">ID</th>
             <th scope="col">Nama</th>
             <th scope="col">NIM</th>
             <th scope="col">ALAMAT</th>
+            <th scope="col">OPSI</th>
             </tr>
         </thead>
         <tbody>
 
             <?php
-                $sql= "SELECT FROM mahasiswa";
-                $query = mysqli_query($koneksi,$sql);
+           
+                include 'koneksi.php';
+                $no = 1;
+		        $data = mysqli_query($koneksi,"select * from mahasiswa");
+		        while($d = mysqli_fetch_array($data)){
 
-                while($mahasiswa = mysqli_fetch_array($query)){
-                echo "<tr>";
-                echo "<th>".$mahasiswa['id']."</th>";
-                echo "<td>".$mahasiswa['nama']."</td>";
-                echo "<td>".$mahasiswa['nim']."</td>";
-                echo "<td>".$mahasiswa['alamat']."</td>";
-                echo "</tr>";
+			?>
 
-            }
-            ?>
+                <tr>
+                    <td><?php echo $no++; ?></td>
+                    <td><?php echo $d['nama']; ?></td>
+                    <td><?php echo $d['nim']; ?></td>
+                    <td><?php echo $d['alamat']; ?></td>
+                    <td>
+                        <a href="edit.php?id=<?php echo $d['id']; ?>">EDIT</a>
+                        <a href="hapus.php?id=<?php echo $d['id']; ?>">HAPUS</a>
+                    </td>
+                </tr>
+
+			<?php 
+		    }
+		    ?>
         </tbody>
         </table>
     </div>
 
-    <p>Total: <?php echo mysqli_num_rows($query) ?></p>
+
 
 
     <!-- Optional JavaScript -->

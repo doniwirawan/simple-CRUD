@@ -8,30 +8,49 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <title>CRUD doni wirawan</title>
+    <title>hapus data</title>
   </head>
-  <body class="bg-">
+  <body>
   <div class="row d-flex justify-content-center">
-  
-    <div class="col-4 xs-auto justify-content-center border mt-5 p-4 rounded bg-light ">
-      <h1 class="text-center text-capitalize mt-1">form pendaftaran siswa</h1>
-      <form action="input_data.php" method="POST" class="">
+  <div class="col-4 xs-auto justify-content-center border mt-5 p-4 rounded bg-light ">
+    <h1>Edit data mahasiswa</h1>
+    <a href="view.php">KEMBALI</a>
+
+    <?php
+    include'koneksi.php';
+    $id = $_GET['id'];
+    $data = mysqli_query($koneksi,"SELECT * FROM mahasiswa where id='$id'");
+    while($d= mysqli_fetch_array($data)){
+    ?>
+
+
+    <form action="update.php" action="action">
         <div class="form-group font-weight-bolder">
           <label for="formGroupExampleInput">Nama</label>
-          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder" name="nama" required>
+          <input type="hidden" name="id" value="<?php echo $d['id']; ?>">
+          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder" name="nama" required value="<?php echo $d['nama']; ?>">
         </div>
         <div class="form-group font-weight-bolder">
           <label for="formGroupExampleInput2">NIM</label>
-          <input type="number" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder" name="nim" required>
+          <input type="hidden" name="id" value="<?php echo $d['id']; ?>">
+          <input type="number" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder" name="nim" required value="<?php echo $d['nim']; ?>">
         </div>
         <div class="form-group font-weight-bolder">
-          <label for="exampleFormControlTextarea1">Alamat</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="alamat"  required></textarea>
+          <label for="formGroupExampleInput2">Alamat</label>
+          <input type="hidden" name="id" value="<?php echo $d['id']; ?>">
+          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder" name="alamat" required value="<?php echo $d['alamat']; ?>">
         </div>
-        <button type="submit" class="btn btn-primary">Daftar</button>
-      </form>
-    </div>
-</div>
+        
+        <button type="submit" class="btn btn-primary">Simpan</button>
+    </form>
+
+
+    <?php 
+	}
+	?>
+
+    
+  </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
