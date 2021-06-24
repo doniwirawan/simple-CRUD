@@ -1,12 +1,13 @@
 <?php
-include'koneksi.php';
+include 'koneksi.php';
 
-$id=$_POST['id'];
-$nama=$_POST['nama'];
-$nim=$_POST['nim'];
-$alamat=$_POST['alamat'];
+$kode = $_POST['kode'];
+$nama = $_POST['nama'];
+$ibukota = $_POST['ibukota'];
 
-mysqli_query($koneksi,"UPDATE mahasiswa set nama='$nama', nim='$nim', alamat='$alamat' where id='$id'");
+$sql = mysqli_query($koneksi, "UPDATE tb_negara_20101108 set  nama_20101108='$nama',ibukota_20101108='$ibukota' where kode_20101108='$kode'");
 
-header("location:view.php");
-?>
+
+
+
+header("location:index.php");
