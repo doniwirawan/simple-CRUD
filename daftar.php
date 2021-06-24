@@ -32,7 +32,7 @@
 
           <div class="form-group font-weight-bolder">
             <label for="test">Ibukota Negara</label>
-            <input class="form-control" id="test" rows="3" name="ibukota" required></input>
+            <input class="form-control" id="test" rows="3" name="ibukota" required placeholder="Ibukota Negara"></input>
           </div>
           <button type="submit" class="btn btn-primary">Tambahkan</button>
         </form>
