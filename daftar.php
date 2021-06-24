@@ -31,8 +31,8 @@
           </div>
 
           <div class="form-group font-weight-bolder">
-            <label for="exampleFormControlTextarea1">Ibukota Negara</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="ibukota" required></textarea>
+            <label for="test">Ibukota Negara</label>
+            <input class="form-control" id="test" rows="3" name="ibukota" required></input>
           </div>
           <button type="submit" class="btn btn-primary">Tambahkan</button>
         </form>
