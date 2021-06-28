@@ -55,8 +55,8 @@
           <td><?php echo $d['nama_20101108']; ?></td>
           <td><?php echo $d['ibukota_20101108']; ?></td>
           <td>
-            <a href="edit.php?kode_20101108=<?php echo $d['kode_20101108']; ?>">EDIT</a>
-            <a href="hapus.php?kode_20101108=<?php echo $d['kode_20101108']; ?>">HAPUS</a>
+            <a href="edit.php?kode_20101108=<?php echo $d['kode_20101108']; ?>" class="btn btn-primary">EDIT</a>
+            <a href="hapus.php?kode_20101108=<?php echo $d['kode_20101108']; ?>" class="btn btn-danger">HAPUS</a>
           </td>
         </tr>
       <?php

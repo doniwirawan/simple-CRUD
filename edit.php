@@ -17,7 +17,7 @@
 <body>
   <div class="row d-flex justify-content-center">
     <div class="col-4 xs-auto justify-content-center border mt-5 p-4 rounded bg-light ">
-      <h1 class="text-capitalize text-center mb-3">Edit data mahasiswa</h1>
+      <h1 class="text-capitalize text-center mb-3">Edit Data Negara</h1>
       <a href="index.php" class="text-decoration-none"><i class="fas fa-backward mr-2"></i>KEMBALI</a>
 
       <?php
