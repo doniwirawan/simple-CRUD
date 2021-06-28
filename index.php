@@ -17,19 +17,19 @@
 
 <body>
   <div class="container mt-4">
-    <h2>Data NEGARA</h2>
+    <h2>DATA NEGARA</h2>
     <br />
     <a href="daftar.php">+ TAMBAH NEGARA</a>
     <br />
     <br />
 
-    <form method="GET" action="">
-      <input type="text" name="cari" placeholder="Search...">
-      <button type="submit">Submit</button>
+    <form method="GET" action="" class="row">
+      <input type="text" name="cari" placeholder="Search..." class="form-control col-11 ml-3">
+      <button type="submit" class="btn btn-primary ml-4"><i class="fa fa-search"></i></button>
     </form>
     <br>
 
-    <table border="1">
+    <table class="table">
       <tr class="bg">
         <th>KODE NEGARA</th>
         <th>NAMA NEGARA</th>

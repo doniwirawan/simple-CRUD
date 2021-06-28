@@ -19,11 +19,11 @@
     <div class="row d-flex justify-content-center">
 
       <div class="col-lg-4 col-xs-10 xs-auto justify-content-center border mt-lg-5 p-4 p-xs-5 rounded bg-light ">
-        <h1 class="text-center text-capitalize mt-1">form pendaftaran siswa</h1>
+        <h1 class="text-center text-capitalize mt-1">FORM TAMBAH DATA</h1>
         <form action="input_data.php" method="POST" class="">
           <div class="form-group font-weight-bolder">
             <label for="formGroupExampleInput2">Kode Negara</label>
-            <input type="number" class="form-control" id="formGroupExampleInput2" placeholder="ID01" name="kode" required>
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="ID01" name="kode" required>
           </div>
           <div class="form-group font-weight-bolder">
             <label for="formGroupExampleInput">Nama Negara</label>
