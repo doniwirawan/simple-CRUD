@@ -26,7 +26,7 @@
 
     <form method="GET" action="" class="row">
       <input type="text" name="cari" placeholder="Search..." class="form-control col-11 ml-3">
-      <button type="submit" class="btn btn-primary ml-4"><i class="fa fa-search"></i></button>
+      <button type="submit" class="btn btn-primary ml-4 col-1"><i class="fa fa-search"></i></button>
     </form>
     <br>
 
