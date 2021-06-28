@@ -17,7 +17,7 @@
 
 <body>
   <div class="container mt-4">
-    <h2>DATA NEGARA</h2>
+    <h1 class="font-weight-bold">DATA NEGARA</h1>
     <br />
     <a href="daftar.php">+ TAMBAH NEGARA</a>
     <br />
